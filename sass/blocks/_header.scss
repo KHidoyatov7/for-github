@@ -1,0 +1,67 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 0 34px 0;
+    &__left {
+        display: flex;
+        column-gap: 59px;
+        align-items: center;
+        &__menu {
+            display: flex;
+            column-gap: 32px;
+            &__list {
+                color: $text-color;
+                font-weight: 700;
+                font-size: 15px;
+                line-height: 25px;
+            }
+            @include for-mobile {
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                top: 22px;
+                left: 0;
+                height: 100vh;
+                width: 256px;
+                row-gap: 24px;
+                padding: 64px 32px;
+                transform: translateX(-100%);
+            }
+        }
+        &__logo {
+            @include for-mobile {
+                margin: 0 auto;
+        }
+        }
+    }
+    .button {
+        button {
+            padding: 14px 39px;
+            color: white;
+            background-color: $button-color;
+            border: none;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 25px;
+        }
+        @include for-mobile {
+            display: none;
+        }
+    }
+    &__add {
+        display: none;
+        @include for-mobile {
+            display: block;
+        }
+    }
+    &__remove__btn {
+        @include for-mobile {
+            display: none;
+        }
+    }
+}
+
+.show {
+    transform: translateX(0);
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./sass/main.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <div class="navbar">
+                    <div class="navbar__add">
+                        <button class="navbar__add__btn">
+                            <img src="./images/nav/add-btn.svg" alt="add">
+                        </button>
+                        <button class="navbar__remove__btn">
+                            <img src="./images/nav/remove-btn.svg" alt="remove">
+                        </button>
+                    </div>
+                    <div class="navbar__left">
+                        <img class="navbar__left__logo" src="./images/nav/scoot.svg" alt="fr bored">
+                        <ul class="navbar__left__menu">
+                            <li class="navbar__left__menu__list">About</li>
+                            <li class="navbar__left__menu__list">Location</li>
+                            <li class="navbar__left__menu__list">Careers</li>
+                        </ul>
+                    </div>
+                    <div class="button">
+                        <button>Get Scootin</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+
+
+
+    <script>
+        const btn = document.querySelector('.navbar__add__btn');
+        const menu = document.querySelector('.navbar__left__menu');
+
+
+        btn.addEventListener('click', () => {
+            menu.classList.add('.show')
+        })
+    </script>
+</body>
+</html>
