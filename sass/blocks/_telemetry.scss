@@ -84,6 +84,7 @@
             max-width: 360px;
             color: $text-color;
             margin-top: 27px;
+            font-family: $primary-font;
         }
     }
     @include for-tablet {

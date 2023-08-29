@@ -1,0 +1,167 @@
+.section-two {
+    position: relative;
+     .left-right {
+        display: flex;
+        justify-content: space-between;
+        .left {
+            position: absolute;
+            margin: 200px;
+        }
+        .right {
+            .first-img {
+                position: absolute;
+                top: 500px;
+                right: 0;
+                z-index: 3;
+                @include for-tablet {
+                    top: 400px;
+                    width: 700px;
+                }
+                @include for-mobile {
+                    top: 100px;
+                    width: 499px;
+                    height: 120px;
+                }
+            }
+            .second-img {
+                position: absolute;
+                top: 200px;
+                right: 0;
+                z-index: 0;
+                @include for-tablet {
+                    top: 160px;
+                }
+                @include for-mobile {
+                    display: none;
+                }
+            }
+            .third-img {
+                position: absolute;
+                top: 1500px;
+                right: 0;
+                z-index: 3;
+                @include for-tablet {
+                    top: 2050px;
+                }
+                @include for-mobile {
+                    top: 1750px;
+                }
+            }
+            .fourth-img {
+                position: absolute;
+                top: 1400px;
+                right: 0;
+                z-index: 0;
+                 @include for-tablet {
+                    top: 2000px;
+                }
+                @include for-mobile {
+                    display: none;
+                }
+            }
+        }
+        .left {
+            .left-first {
+                position: absolute;
+                top: 600px;
+                left: -200px;
+                z-index: 3;
+                @include for-tablet {
+                    top: 900px;
+                }
+                @include for-mobile {
+                    top: 600px;
+                }
+            }
+            .left-second {
+                position: absolute;
+                top: 600px;
+                left: -200px;
+                z-index: 0;
+                @include for-tablet {
+                    top: 860px;
+                }
+                @include for-mobile {
+                    display: none;
+                }
+            }
+        }
+     }
+}
+
+.product {
+    margin-top: 200px;
+    &__card {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 160px;
+        @include for-tablet {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 230px;
+            text-align: center;
+        }
+        img {
+            border-radius: 100%;
+            @include for-tablet {
+                margin-bottom: 64px;
+                z-index: 2;
+                width: 311px;
+            }
+        }
+        &__about {
+            &__title {
+                font-weight: 700;
+                font-size: 48px;
+                line-height: 48px;
+                letter-spacing: -2.14px;
+                color: $title-color;
+                max-width: 430px;
+            }
+            &__text {
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 25px;
+                font-family: $primary-font;
+                color: $text-color;
+                max-width: 400px;
+                margin: 24px 0 44px 0;
+                @include for-mobile {
+                    max-width: 300px;
+                    margin: 24px auto;
+                }
+            }
+        }
+        button {
+            padding: 14px 44px;
+            background-color: $button-color;
+            border-width: 3px;
+            color: white;
+            font-family: $main-font;
+            border-color: $button-color;
+        }
+        button:hover {
+            color: $button-color;
+            background-color: white;
+            border-width: 3px;
+            border-color: $button-color;
+        }
+    }
+    .second-card {
+        display: flex;
+        flex-direction: row;
+        @include for-tablet {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    @include for-tablet {
+        width: 100%;
+        margin: 200px auto;
+    }
+    @include for-mobile {
+        margin: -100px auto;
+    }
+}

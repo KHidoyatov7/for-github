@@ -40,10 +40,17 @@
             padding: 14px 39px;
             color: white;
             background-color: $button-color;
-            border: none;
+            border-width: 3px;
+            border-color: $button-color;
             font-weight: 700;
             font-size: 15px;
             line-height: 25px;
+        }
+        button:hover {
+            color: $button-color;
+            background-color: white;
+            border-width: 3px;
+            border-color: $button-color;
         }
     }
     
@@ -161,15 +168,22 @@
                 padding: 14px 39px;
                 color: white;
                 background-color: $button-color;
-                border: none;
+                border-width: 3px;
                 font-weight: 700;
                 font-size: 15px;
                 line-height: 25px;
                 margin-left: 90px;
+                border-color: $button-color;
 
                 @include for-tablet {
                     margin: 0;
                 }
+            }
+            .button:hover {
+                color: $button-color;
+                background-color: white;
+                border-width: 3px;
+                border-color: $button-color;
             }
         }
         @include for-tablet {
