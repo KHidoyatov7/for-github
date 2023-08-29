@@ -1,0 +1,25 @@
+.oval-path {
+    display: flex;
+    align-items: center;
+    position: relative;
+    .oval {
+        width: 96px;
+        height: 96px;
+        border-radius: 100%;
+        background-color: #FCB72B;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: sticky;
+        img {
+            width: 38.38px;
+            height: 47.97px;
+        }
+    }
+    .path {
+        width: 200px;
+        height: 10px;
+        background-color: #E5ECF4;
+        position: sticky;
+    }
+}

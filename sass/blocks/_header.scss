@@ -45,10 +45,8 @@
             font-size: 15px;
             line-height: 25px;
         }
-        @include for-mobile {
-            display: none;
-        }
     }
+    
     &__add {
         display: none;
         @include for-mobile {
@@ -64,4 +62,133 @@
 
 .show {
     transform: translateX(0);
+}
+
+
+
+
+
+
+
+
+
+///////............////////////..............////////////////
+
+
+
+
+
+
+
+
+
+.bg {
+    position: relative;
+    background-image: url(../../images/header/Bitmap\ \(2\).jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 768px;
+    @include for-tablet {
+        background-image: url(../../images/header/tablet-bg.jpg);
+    }
+
+    .hero {
+        padding: 153px 0 0 ;
+        &__title {
+            font-weight: 700;
+            font-size: 56px;
+            line-height: 56px;
+            color: white;
+            max-width: 500px;
+            @include real-mobile {
+                max-width: 311px;
+                font-size: 40px;
+                line-height: 40px;
+            }
+        }
+        &__bottom {
+            display: flex;
+            justify-content: space-between;
+            column-gap: 40px;
+            position: relative;
+            &__text {
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 25px;
+                color: white;
+                max-width: 380px;
+                font-family: $primary-font;
+                margin: 40px 0 40px 100px;
+                @include for-tablet {
+                    margin: 40px 0;
+                }
+                @include for-mobile {
+                    max-width: 311px;
+                }
+            }
+            &__first {
+                position: absolute;
+                left: -180px;
+                top: 75px;
+                max-width: 202px;
+                @include for-tablet {
+                    display: none;
+                }
+                @include before-tablet {
+                    width: 400px;
+                    }
+            }
+            &__last {
+                position: absolute;
+                left: 540px;
+                top: 75px;
+                max-width: 446px;
+                @include before-tablet {
+                left: 500px;
+                width: 400px;
+                }
+                @include for-tablet {
+                    top: 250px;
+                    left: -385px;
+                    display: none;
+
+                }
+            }
+        }
+        .button-2 {
+            .button {
+                padding: 14px 39px;
+                color: white;
+                background-color: $button-color;
+                border: none;
+                font-weight: 700;
+                font-size: 15px;
+                line-height: 25px;
+                margin-left: 90px;
+
+                @include for-tablet {
+                    margin: 0;
+                }
+            }
+        }
+        @include for-tablet {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            height: 768px;
+        }
+        &__last {
+            display: none;
+            @include for-tablet {
+                display: block;
+                margin: 10px 500px 0 0;
+            }
+
+            @include for-mobile {
+                margin: 0;
+            }
+        }
+    }
 }
