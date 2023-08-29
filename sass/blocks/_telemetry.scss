@@ -1,0 +1,99 @@
+.telemetry {
+    display: flex;
+    flex-direction: column;
+    margin-top: 122px; 
+    &__oval-path {
+        display: flex;
+        align-items: center;
+        position: relative;
+        &__spans {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            left: -200px;
+            .oval {
+                width: 96px;
+                height: 96px;
+                border-radius: 100%;
+                background-color: #FCB72B;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img {
+                    width: 38.38px;
+                    height: 47.97px;
+                }
+                @include for-mobile {
+                    margin-bottom: 220px;
+                }
+            }
+            .path {
+                width: 260px;
+                height: 10px;
+                background-color: #E5ECF4;
+                @include for-tablet {
+                    width: 15px;
+                    height: 115px;
+                }
+                @include for-mobile {
+                    display: none;
+                }
+            }
+            @include for-tablet {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                left: 0;
+                top: -122px;
+            }
+            @include for-mobile {
+               margin: 0 auto;
+               width: 375px;
+            }
+        }
+    }
+    &__box {
+        display: flex;
+        column-gap: 30px;
+        @include for-tablet {
+            flex-direction: column;
+        }
+    }
+    &__block {
+        margin-top: 100px;
+        @include for-mobile {
+            text-align: center;
+        }
+        @include for-tablet {
+            margin-top: 0;
+            margin-bottom: 40px;
+        }
+        @include for-mobile {
+            margin-bottom: 160px
+        }
+        &__title {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 28px;
+            color: $title-color;
+        }
+        &__text {
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 25px;
+            max-width: 360px;
+            color: $text-color;
+            margin-top: 27px;
+            font-family: $primary-font;
+        }
+    }
+    @include for-tablet {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: unset;
+    }
+    @include for-mobile {
+        width: 375px;
+        margin: 320px auto;
+    }
+}

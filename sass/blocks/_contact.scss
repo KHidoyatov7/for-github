@@ -1,0 +1,59 @@
+.bg-color {
+    background-color: #495567;
+    height: 300px;
+    padding: 102px 0;
+    .contact {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__text {
+            &__title {
+                font-weight: 700;
+                font-size: 48px;
+                line-height: 48px;
+                letter-spacing: -2.14px;
+                max-width: 400px;
+                color: white;
+                margin-bottom: 40px;
+                @include for-mobile {
+                    font-size: 32px;
+                }
+            }
+            
+        }
+        &__us {
+            display: flex;
+            column-gap: 18px;
+            &__appstore {
+                background-color: #E5ECF4;
+                display: flex;
+                align-items: center;
+                width: 159px;
+                height: 59px;
+                border-radius: 5px;
+                column-gap: 11px;
+                padding: 20px 16px;
+                &__about {
+                    &__span {
+                        font-size: 10px;
+                        color: $title-color;
+                    }
+                    &__name {
+                        font-weight: 700;
+                        color: $title-color;
+                    }
+                }
+            }
+        }
+        @include for-tablet {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+    @include for-tablet {
+        padding: 84px 0;
+    }
+    @include for-mobile {
+        padding: 70px 0;
+    }
+}

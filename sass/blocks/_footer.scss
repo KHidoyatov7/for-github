@@ -1,0 +1,38 @@
+footer {
+    background-color: #333A44;
+    height: 96px;
+    padding: 35px 0 32px 0;
+    @include for-mobile {
+        height: 438px;
+    }
+}
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include for-mobile {
+        flex-direction: column;
+    }
+    &__left {
+        display: flex;
+        align-items: center;
+        column-gap: 58px;
+        @include for-mobile {
+            flex-direction: column;
+            row-gap: 41px;
+        }
+        &__menu {
+            text-align: center;
+            display: flex;
+            column-gap: 32px;
+            color: $text-color;
+            @include for-mobile {
+                flex-direction: column;
+                row-gap: 16px;
+            }
+        }
+    }
+    @include for-mobile {
+        row-gap: 85px;
+    }   
+}
