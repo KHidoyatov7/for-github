@@ -4,7 +4,7 @@
     }
 }
 @mixin for-tablet {
-    @media (max-width: 930px) {
+    @media (max-width: 950px) {
         @content;
     }
 }

@@ -101,7 +101,7 @@
             line-height: 56px;
             color: white;
             max-width: 500px;
-            @include real-mobile {
+            @include for-mobile {
                 max-width: 311px;
                 font-size: 40px;
                 line-height: 40px;
@@ -187,7 +187,17 @@
             }
 
             @include for-mobile {
-                margin: 0;
+                margin: 7px 0 0 -743px;
+                display: none;
+            }
+        }
+        .arrow-mobile {
+            display: none;
+            @include for-mobile {
+                display: flex;
+                width: 100%;
+                justify-content: start;
+                margin-left: -58px;
             }
         }
     }
