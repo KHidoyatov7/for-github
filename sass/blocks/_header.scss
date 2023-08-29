@@ -10,6 +10,10 @@
         &__menu {
             display: flex;
             column-gap: 32px;
+            transition: 0.3s;
+            .this {
+                row-gap: 1100px;
+            }
             &__list {
                 color: $text-color;
                 font-weight: 700;
@@ -20,13 +24,17 @@
                 display: flex;
                 flex-direction: column;
                 position: fixed;
-                top: 22px;
+                top: 65px;
                 left: 0;
                 height: 100vh;
-                width: 256px;
+                width: 500px;
                 row-gap: 24px;
-                padding: 64px 32px;
+                padding: 64px 70px;
                 transform: translateX(-100%);
+                background-color: #333A44;
+            }
+            @include real-mobile {
+                padding: 64px 160px;
             }
         }
         &__logo {
@@ -52,15 +60,48 @@
             border-width: 3px;
             border-color: $button-color;
         }
+        @include for-mobile {
+            display: none;
+        }
+    }
+    .button-2 {
+        button {
+            padding: 14px 39px;
+            color: white;
+            background-color: $button-color;
+            border-width: 3px;
+            border-color: $button-color;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 25px;
+            display: none;
+            @include for-mobile{
+                display: block;
+            }
+        }
+        button:hover {
+            color: $button-color;
+            background-color: white;
+            border-width: 3px;
+            border-color: $button-color;
+        }
     }
     
     &__add {
         display: none;
         @include for-mobile {
             display: block;
+            background: none;
+            border: none;
+        }
+        &__btn {
+            background: none;
+            border: none;
         }
     }
     &__remove__btn {
+        background: none;
+        border: none;
         @include for-mobile {
             display: none;
         }
@@ -69,6 +110,8 @@
 
 .show {
     transform: translateX(0);
+    z-index: 3;
+    transition: 0.3s;
 }
 
 
